@@ -1,5 +1,5 @@
 <?php
-include('includes/bismillah.html');
-include('includes/style.css');
-include("includes/bismillah123.js");
+include("bismillah.html");
+include("style.css");
+include("bismillah123.js");
 ?>
