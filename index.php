@@ -1,8 +1,8 @@
-<html>
+<?php
     <head>
         <title>TIC TAC TOE</title>
         
-        <link rel="stylesheet" type="text/css" href="style.css" charset=>    
+        <link rel="stylesheet" type="text/css" href="style.css" charset=utf-8>    
         
     </head>
     
@@ -53,4 +53,4 @@
         <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     </body>
     
-</html>
+?>
