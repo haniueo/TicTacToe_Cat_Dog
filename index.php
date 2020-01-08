@@ -1,5 +1,59 @@
-<?php include 'index.html';
-
-
+<? php
+echo '<!DOCTYPE html>';
+echo '<html>';
+echo '<head>';
+echo '<title>TIC TAC TOE</title>';
+echo '';
+echo '<link rel="stylesheet" type="text/css" href="style.css" charset=utf-8>';
+echo '';
+echo '</head>';
+echo '';
+echo '<body>';
+echo '';
+echo '<div class="container">';
+echo '<h1> (づ｡◕‿‿◕｡)づ <br/> 𝐓𝐢𝐜 - 𝐓𝐚𝐜 - 𝐓𝐨𝐞  </h1>';
+echo '<ul id="game">';
+echo '<!-- first row -->';
+echo '<li data-pos="0,0"></li>';
+echo '<li data-pos="0,1"></li>';
+echo '<li data-pos="0,2"></li>';
+echo '<!-- second row -->';
+echo '<li data-pos="1,0"></li>';
+echo '<li data-pos="1,1"></li>';
+echo '<li data-pos="1,2"></li>';
+echo '<!-- third row -->';
+echo '<li data-pos="2,0"></li>';
+echo '<li data-pos="2,1"></li>';
+echo '<li data-pos="2,2"></li>';
+echo '</ul>';
+echo '';
+echo '<button id="reset-game"> ❤ Reset Game ❤</button>';
+echo '';
+echo '<div id="game-messages">';
+echo '<span class="player-x-win"></span>';
+echo '<span class="player-o-win"></span>';
+echo '<span class="draw"></span>';
+echo '<span class=""> <br/> Klik Reset Game Jika Score Bertambah 😂 </span>';
+echo '</div>';
+echo '';
+echo '<aside id="nfo">';
+echo '<h2> 𝑴𝒖𝒍𝒕𝒊 𝑷𝒍𝒂𝒚𝒆𝒓 𝑮𝒂𝒎𝒆𝒔 </h2>';
+echo '<div id="whos-turn" class="🐱">';
+echo '<span class="🐱">Player 1 ⭬  🐱</span>';
+echo '<span class="🐶">Player 2 ⭬  🐶</span>';
+echo '</div>';
+echo '';
+echo '<h2>𝑺𝒄𝒐𝒓𝒆 𝑩𝒐𝒂𝒓𝒅</h2>';
+echo '<div id="score">';
+echo 'Player 🐱: <span id="player-one-score">0</span> <br />';
+echo 'Player 🐶: <span id="player-two-score">0</span> <br />';
+echo '</div>';
+echo '</aside>';
+echo '</div>';
+echo '';
+echo '<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>';
+echo '</body>';
+echo '<script src="http://code.jquery.com/jquery-1.5.1.js" type="text/javascript" charset="utf-8"></script>';
+echo '<script src="bismillah123.js" type="text/javascript" charset="utf-8"></script>';
+echo '</html>';
 ?>
-
