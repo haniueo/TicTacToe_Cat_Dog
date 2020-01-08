@@ -1,5 +1,4 @@
 <?php
-include("bismillah.html");
-include("bismillah123.js")
+include_once("bismillah.html");
 
 ?>
