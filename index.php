@@ -1,5 +1,5 @@
 <?php
-require "bismillah.html";
-require "bismillah123.js";
+require_once("bismillah.html");
+
 
 ?>
