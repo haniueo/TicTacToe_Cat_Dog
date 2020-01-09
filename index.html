@@ -6,11 +6,11 @@
 
   <title>TIC TAC TOE</title> 
 
-  <link rel="stylesheet" type="text/css" href="style1.css" charset="utf-8"> 
+  <link rel="stylesheet" type="text/css" href="style.css" charset="utf-8"> 
 
  </head> 
 
- <body> 
+ <body onload="game()"> 
 
   <div class="container"> 
 
@@ -81,6 +81,18 @@
     </div> 
 
    </aside> 
+   
+   <div id="liffAppContent">
+    <!-- action button -->
+    <div class="buttonGroup">
+        <div class="buttonRow">
+            <button id="openWindowButton" > Open External Window </button>
+            <button id="closeWindowButton"> Close LIFF App </button>
+        </div>
+     </div>
+    </div>
+            
+
 
   </div> 
 
@@ -89,7 +101,7 @@
   <script src="http://code.jquery.com/jquery-1.5.1.js" type="text/javascript" charset="utf-8"></script> 
 
   <script src="set.js" type="text/javascript" charset="utf-8"></script> 
-
+  <script src="LIFF.js" type="text/javasxript" charset="utf-8"></script>
  </body>
 
 </html>
