@@ -81,6 +81,8 @@ function displayLiffData() {
     document.getElementById('isInClient').textContent = liff.isInClient();
     document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
 }
+
+
 function displayIsInClientInfo() {
     if (liff.isInClient()) {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
@@ -91,16 +93,17 @@ function displayIsInClientInfo() {
     }
 }
 
+/**
+* Register event handlers for the buttons displayed in the app
+*/
 function registerButtonHandlers() {
     // openWindow call
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'https://tictactoe-2player.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://catatanliffv2.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
     });
-}
-
 
     // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
@@ -110,10 +113,6 @@ function registerButtonHandlers() {
             liff.closeWindow();
         }
     });
-    function sendAlertIfNotInClient() {
-        alert('Tombol ini hanya untuk LIFF saja (っ´ω｀c) ');
-    }
-    
     /**
     * Toggle specified element
     * @param {string} elementId The ID of the selected element
