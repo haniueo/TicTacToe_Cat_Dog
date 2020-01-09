@@ -1,3 +1,3 @@
 <?php
-include 'index1.html';
+include 'index.html';
 ?>
