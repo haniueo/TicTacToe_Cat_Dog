@@ -5,11 +5,10 @@
  <head> 
 
   <title>TIC TAC TOE</title> 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="http://code.jquery.com/jquery-1.5.1.js" type="text/javascript" charset="utf-8"></script> 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.5.1.js" type="text/javascript" charset="utf-8"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="style.css" charset="utf-8"> 
 
  </head> 
@@ -54,7 +53,7 @@
 
     <!-- <span class=""> <br> Klik Reset Game Jika Score Bertambah 😂 </span> -->
 
-   </div>
+   
 
    <aside id="nfo"> 
 
@@ -85,39 +84,26 @@
     </div> 
 
    </aside> 
-  </div>
    
-  <div id="liffAppContent">
-            <!-- ACTION BUTTONS -->
-            <div class="buttonGroup">
-                <div class="buttonRow">
-                    <button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button>
-                    <button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
-                    
-                </div>
-
-            </div>
-
-            <!-- LIFF DATA -->
-            <div id="liffData">
-                
-                <table>
-                    <tr>
-                        
-                        <td id="isInClient" class="textLeft"></td>
-                    </tr>
-                    <tr>
-                        
-                        <td id="isLoggedIn" class="textLeft"></td>
-                    </tr>
-                </table>
-            </div>
-    
+   <div id="liffAppContent">
+    <!-- action button -->
+    <div class="buttonGroup">
+        <div class="buttonRow">
+            <button id="openWindowButton" > Open External Window </button>
+            <button id="closeWindowButton"> 💔 Close LIFF App 💔 </button>
+        </div>
+     </div>
     </div>
-   
- </body>
-  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
- <script src="set.js" type="text/javascript" charset="utf-8"></script> 
+            
+
+
+  </div> 
+
+  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> 
+
+  
+  <script src="set.js" type="text/javascript" charset="utf-8"></script> 
   <script src="LIFF.js" type="text/javascript" charset="utf-8"></script>
+ </body>
 
 </html>
