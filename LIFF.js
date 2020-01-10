@@ -1,7 +1,7 @@
 function initializeLiff(myLiffId) {
     liff
         .init({
-            liffId: myLiffId
+            liffId: "1653743689-n1eadZKR"
         })
         .then(() => {
             // start to use LIFF's api
