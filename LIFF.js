@@ -1,4 +1,4 @@
-window.onload = function initializeLiff(myLiffId) {
+window.onload = function() {
     liff
         .init({
             liffId: "1653743689-n1eadZKR"
@@ -10,23 +10,6 @@ window.onload = function initializeLiff(myLiffId) {
         .catch((err : LiffError) => {
             console.log(err.code, err.message)
     });
-
-/**
-* Check if myLiffId is null. If null do not initiate liff.
-* @param {string} myLiffId The LIFF ID of the selected element
-*/
-function initializeLiffOrDie(myLiffId) {
-    if (!myLiffId) {
-        document.getElementById("liffAppContent").classList.add('hidden');
-        document.getElementById("liffIdErrorMessage").classList.remove('hidden');
-    } else {
-        initializeLiff(myLiffId);
-    }
-};
-function displayLiffData() {
-    document.getElementById('isInClient').textContent = liff.isInClient();
-    document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
-}
 
 
 // openWindow call
