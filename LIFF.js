@@ -34,7 +34,7 @@ function displayLiffData() {
 document.getElementById('openWindowButton').addEventListener('click', function() {
     liff.openWindow({
         url: 'https://tictactoe-2player.herokuapp.com',
-        external: true
+        external: false
     });
 });
 // closeWindow call
