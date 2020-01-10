@@ -10,6 +10,10 @@ window.onload = function initializeLiff(myLiffId) {
         .catch((err : LiffError) => {
             console.log(err.code, err.message)
     });
+function displayLiffData() {
+      document.getElementById('isInClient').textContent = liff.isInClient();
+    document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
+}
 
 
 // openWindow call
