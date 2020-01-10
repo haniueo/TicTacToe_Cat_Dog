@@ -7,11 +7,10 @@ window.onload = function initializeLiff(myLiffId) {
             // start to use LIFF's api
             initializeApp();
         })
-        .catch((err) => {
-            document.getElementById("liffAppContent").classList.add('hidden');
-            document.getElementById("liffInitErrorMessage").classList.remove('hidden');
-        });
-}
+        .catch((err : LiffError) => {
+            console.log(err.code, err.message)
+    });
+
 /**
 * Check if myLiffId is null. If null do not initiate liff.
 * @param {string} myLiffId The LIFF ID of the selected element
@@ -61,3 +60,4 @@ function sendAlertIfNotInClient() {
             (elem.style.display = 'block');
         }
     }
+}
