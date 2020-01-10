@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function game() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
     const defaultLiffId = "1653743689-n1eadZKR";   // change the default LIFF value if you are not using a node server
 
