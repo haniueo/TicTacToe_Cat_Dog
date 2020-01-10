@@ -1,7 +1,7 @@
 window.onload = function initializeLiff(myLiffId) {
     liff
         .init({
-            liffId:{1653743689-n1eadZKR};
+            liffId:myLiffId;
         })
         .then(() => {
             // start to use LIFF's api
