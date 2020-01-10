@@ -1,5 +1,4 @@
-window.onload = function() {
-    function initializeLiff(myLiffId) {
+window.onload = function initializeLiff(myLiffId) {
     liff
         .init({
             liffId: myLiffId
