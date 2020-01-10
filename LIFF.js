@@ -7,23 +7,36 @@ window.onload = function initializeLiff(myLiffId) {
             // start to use LIFF's api
             initializeApp();
         })
-        .catch((err : LiffError) => {
+        .catch((err:LiffError) => {
             console.log(err.code, err.message)
     });
+
+function initializeApp() {
+    displayLiffData();
+    displayIsInClientInfo();
+    registerButtonHandlers();
+
+    // check if the user is logged in/out, and disable inappropriate button
+    if (liff.isLoggedIn()) {
+        document.getElementById('liffLoginButton').disabled = true;
+    } else {
+        document.getElementById('liffLogoutButton').disabled = true;
+    }
+}
 function displayLiffData() {
       document.getElementById('isInClient').textContent = liff.isInClient();
     document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
 }
-
-
-// openWindow call
-document.getElementById('openWindowButton').addEventListener('click', function() {
-    liff.openWindow({
-        url: 'https://tictactoe-2player.herokuapp.com',
-        external: false
+function registerButtonHandlers() {
+    // openWindow call
+    document.getElementById('openWindowButton').addEventListener('click', function() {
+        liff.openWindow({
+            url: 'https://tictactoe-2player.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            external: true
+        });
     });
-});
-// closeWindow call
+
+    // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
@@ -31,6 +44,8 @@ document.getElementById('openWindowButton').addEventListener('click', function()
             liff.closeWindow();
         }
     });
+}
+
 function sendAlertIfNotInClient() {
         alert('Tombol ini hanya untuk LIFF saja (っ´ω｀c) ');
     }
