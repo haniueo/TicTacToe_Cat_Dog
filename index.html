@@ -1,118 +1,110 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
-
- <head> 
-
-  <title>TIC TAC TOE</title> 
-   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <title> Tic Tac Toe 🐱 x 🐶 Multiplayer </title> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="style.css" charset="utf-8"> 
+        <style media="screen">
+            body { background: #F08080; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold; text-align: center;}
+            #container { margin: 0 auto;width: 400px;}
+            #container h2 { font-size: 1em;text-transform: uppercase; letter-spacing: 0.1em; color: azure;}
+            h3 { font-size: 1em;}
+            #game { width: 240px; height: 240px;border: 1px solid #2c3e52; margin: auto; padding: 0; margin-bottom: 20px;}
+            #game li { list-style: none; float: left;overflow: hidden;width: 80px;height: 80px;background: #17202a ;border: 1px solid #2c3e52 ;border-right: 1px solid #2c3e52 ;cursor: pointer;text-transform: uppercase;text-align: center;padding-top: 20px;-moz-box-sizing: border-box;box-sizing: border-box;}
+            #game li.🐱 { font-size: 35px;}
+            #game li.🐶 { font-size: 35px;}
+            #game li:hover { background: #212f3d;}
+            #game li:active { width: 80px; height: 80px; border: 0;}
+            #nfo {text-align: center; margin-top: 10px;}
+            #reset-game {text-align: center; font-weight: bold; border: none;padding: 0.06em 1.2em;background: #ed4e6e;color: #ffffff;font-size: 1em;letter-spacing: 1px;text-transform: uppercase;cursor: pointer;display: inline-block;margin: 3px 2px;border-radius: 10px;}
+            #reset-game reset-game:hover {background: #2c3e52; }
+    
+            button { background-color: #ed4e6e; border: none; color:azure; padding: 0.08em 1.2em; text-align: center; display: inline-block; font-size: 15px; cursor: pointer; border-radius: 10px; font-weight: bold;}
+            button:hover { background-color: #2c3e52;}       
+        </style>
+    </head>
+    <body>
+            <h2> (づ｡◕‿‿◕｡)づ <br> 𝐓𝐢𝐜 - 𝐓𝐚𝐜 - 𝐓𝐨𝐞 </h2> 
+            <ul id="game"> 
 
- </head> 
+                    <li data-pos="0,0"></li> 
+                
+                    <li data-pos="0,1"></li> 
+                
+                    <li data-pos="0,2"></li> 
+                
+                    <li data-pos="1,0"></li> 
+                
+                    <li data-pos="1,1"></li> 
+                
+                    <li data-pos="1,2"></li> 
+                
+                    <li data-pos="2,0"></li> 
+                
+                    <li data-pos="2,1"></li> 
+                
+                    <li data-pos="2,2"></li> 
+                
+                   </ul>
+                   <div id="message">
+                        <center> <button onclick="login()"> LIFF LogIn </button> <button onclick="logout()"> LIFF LogOut </button> <button onclick="sendMessage()"> Send Message </button> </center>
+                    <div id="emboh" style="display: none;"
+                        <td class="shrink_content"> liff.isInClient </td>
+                        <td class="expand" id="isInClient"> </td>
+                        <td class="shrink_content"> liff.isLoggedIn() </td>
+                        <td class="expand" id="isLoggedIn"> </td>
+                        <td class="shrink_content"> liff.getContext </td>
+                        <td class="expand" id="getContext()"></td>
+                    </div>
 
- <body> 
+                    </div>                
+                           
+     
+                   <center> <button id="reset-game"> 💖 Reset Game 💖</button> </center>
+                   <a><center><img src="https://i.ibb.co/0tt464h/Pngtree-vector-edit-profile-icon-4102441.png" alt="Pngtree-vector-edit-profile-icon-4102441" style="border-radius: 10px;" width="80px" height="80px" id="profileImage"></a></center>
+                   <td class="shrink"> Hey,Hey, Welcome </td> <td class="expand" id="displayName"> </td> 
+                   <div id="game-messages">
+                        <span class="player-x-win"></span>
+                        <span class="player-o-win"></span>
+                        <span class="draw"></span>
+                        <span class="">  Klik Reset Game Jika Score Bertambah 😂 </span>
+                    </div>
+                   <aside id="nfo"> 
+                        <h3> 𝑴𝒖𝒍𝒕𝒊 𝑷𝒍𝒂𝒚𝒆𝒓 𝑮𝒂𝒎𝒆𝒔  </h3>  
+                    
+                        <div id="whos-turn" class="🐱"> 
+                    
+                         <span class="🐱">Player 1 > 🐱 <br/> </span> 
+                    
+                         <span class="🐶">Player 2 > 🐶 </span> 
+                    
+                        </div> 
+                    
+                        <h3>𝑺𝒄𝒐𝒓𝒆 𝑩𝒐𝒂𝒓𝒅</h3> 
+                    
+                        <div id="score">
+                    
+                          Player 🐱: 
+                    
+                         <span id="player-one-score">0</span> 
+                    
+                         <br> Player 🐶: 
+                    
+                         <span id="player-two-score">0 </span> 
+                    
+                         <br> 
+                    
+                        </div> 
+                       </aside>
 
-  <div class="container"> 
-
-   <h1> (づ｡◕‿‿◕｡)づ <br> 𝐓𝐢𝐜 - 𝐓𝐚𝐜 - 𝐓𝐨𝐞 </h1> 
-
-   <ul id="game"> 
-
-    <li data-pos="0,0"></li> 
-
-    <li data-pos="0,1"></li> 
-
-    <li data-pos="0,2"></li> 
-
-    <li data-pos="1,0"></li> 
-
-    <li data-pos="1,1"></li> 
-
-    <li data-pos="1,2"></li> 
-
-    <li data-pos="2,0"></li> 
-
-    <li data-pos="2,1"></li> 
-
-    <li data-pos="2,2"></li> 
-
-   </ul> 
-
-   <button id="reset-game"> 💖 Reset Game 💖</button> 
-
-   <div id="game-messages"> 
-
-    <span class="player-cat-win"></span> 
-
-    <span class="player-dog-win"></span> 
-
-    <span class="draw"></span> 
-
-    <!-- <span class=""> <br> Klik Reset Game Jika Score Bertambah 😂 </span> -->
-
-   
-
-   <aside id="nfo"> 
-
-    <h2> 𝑴𝒖𝒍𝒕𝒊 𝑷𝒍𝒂𝒚𝒆𝒓 𝑮𝒂𝒎𝒆𝒔 </h2> 
-
-    <div id="whos-turn" class="🐱"> 
-
-     <span class="🐱">Player 1 > 🐱 <br/> </span> 
-
-     <span class="🐶">Player 2 > 🐶</span> 
-
-    </div> 
-
-    <h2>𝑺𝒄𝒐𝒓𝒆 𝑩𝒐𝒂𝒓𝒅</h2> 
-
-    <div id="score">
-
-      Player 🐱: 
-
-     <span id="player-one-score">0</span> 
-
-     <br> Player 🐶: 
-
-     <span id="player-two-score">0</span> 
-
-     <br> 
-
-    </div> 
-
-   </aside> 
-   
-   <div id="liffAppContent">
-    <!-- action button -->
-    <div class="buttonGroup">
-        <div class="buttonRow">
-            
-         <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
-        </div>
-     </div>
-    </div>
-    <!-- LIFF INIT ERROR -->
-        <div id="liffInitErrorMessage" class="hidden">
-            <p>Something went wrong with LIFF initialization.</p>
-            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.
-        </div>
-        <!-- NODE.JS LIFF ID ERROR -->
-        <div id="nodeLiffIdErrorMessage" class="hidden">
-            <p>Unable to receive the LIFF ID as an environment variable.</p>
-        </div>
-            
-
-
-  </div> 
-  
-   </body>
-  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> 
-  <script src="set.js" type="text/javascript" charset="utf-8"></script> 
-  <script src="LIFF.js" type="text/javascript" charset="utf-8"></script>
-
-
-
+                       
+                       <script src="set.js" type="text/javascript" charset="utf-8"></script>      
+                       <script src="https://static.line-scdn.net/liff/edge/2.1/sdl.js"></script>
+                       <script src="liff-init.js?1234"></script>
+                       <script src="liff-functions.js?12345"></script>
+        
+    </body> 
 </html>
