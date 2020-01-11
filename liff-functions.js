@@ -38,7 +38,7 @@ function getProfile(){
   }
 
   function closeWindow(){
-      window.alert("Are u Sure To Leave Me? (╥﹏╥)") 
+      window.alert("Are u Sure To Leave Me?  (╥﹏╥)") 
     liff.closeWindow()
   }
   
