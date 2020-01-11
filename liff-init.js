@@ -1,5 +1,5 @@
 const liffId = "1653743689-n1eadZKR"
-liffId.init( {liffId: liffId}, () => {}, (err) => {window.alert(err)} )
+//liffId.init( {liffId: liffId}, () => {}, (err) => {window.alert(err)} )
 if (liff.isLoggedIn()) {
     liff.getProfile().then( (profile) => {
         document.getElementById("profileImage").src = profile.pictureUrl
