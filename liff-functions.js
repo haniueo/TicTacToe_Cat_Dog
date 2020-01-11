@@ -1,30 +1,50 @@
-function getProfile() {
+function getProfile(){
     liff.getProfile().then((profile) => {
-        console.log(JSON.stringify(profile))
-        window.alert(JSON.stringify(profile))
-    }).catch((e) => {
-        console.log(e)
-        window.alert(e)
+      console.log(JSON.stringify(profile))
+      window.alert(JSON.stringify(profile))
+    }).catch( (e) => {
+      console.log(e)
+      window.alert(e)
     })
-}
-function sendMessage() {
-    liff.sendMessage([{"type":"text", "text": "Hello Guys, Let's Play Tic Tac Toe !"}]).then ( () => {window.alert("message has been sent ^^")}).catch((e) => {window.alert(e)})
-}
-function login() {
+  }
+  function getAccessToken(){
+    window.alert(liff.getAccessToken())
+  }
+  function getContext(){
+    window.alert(JSON.stringify(liff.getContext()))
+  }
+
+  function sendMessage(){
+    liff.sendMessages([{"type": "text", "text": "Hello from LIFF2.0"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
+  }
+  
+  function login(){
     liff.login()
-}
-function openWindow() {
-    liff.openWindow({
-        url: "https://tictactoe-2player.herokuapp.com/"
+  }
+
+  function scanCode(){
+    liff.scanCode().then( (result) => {
+      window.alert(JSON.stringify(result))
+    }).catch( (e) => {
+      window.alert(e)
     })
-}
-function closeWindow() {
+  }
+
+  function openWindow(){
+    liff.openWindow({
+      url: "https://sirateek.me",
+      external: true
+    });
+  }
+
+  function closeWindow(){
     liff.closeWindow()
-}
-function logout() {
+  }
+  
+  function logout(){
     if (liff.isLoggedIn()) {
-        liff.logout();
-        window.alert("success logout")
-        location.reload();
+      liff.logout();
+      window.alert("Successfully to Logout")
+      location.reload();
     }
-}
+  }
