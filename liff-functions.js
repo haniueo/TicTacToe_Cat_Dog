@@ -15,7 +15,7 @@ function getProfile(){
   }
 
   function sendMessage(){
-    liff.sendMessages([{"type": "text", "text": "Hello from LIFF2.0"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
+    liff.sendMessages([{"type": "text", "text": "Hello Minna ! </br> Let's Play Tic Tac Toe Together (⁎˃ᆺ˂) </br> Thanks for play this game! </br> Don't Forget to check my social media :"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
   }
   
   function login(){
