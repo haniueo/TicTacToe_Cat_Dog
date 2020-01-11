@@ -15,7 +15,7 @@ function getProfile(){
   }
 
   function sendMessage(){
-    liff.sendMessages([{"type": "text", "text": "Hello Minna !  |  Let's Play Tic Tac Toe Together (⁎˃ᆺ˂)  |  Thanks for play this game!  |  Don't Forget to check my social media : instagram.com/haniueo , github: github.com/haniueo  |"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
+    liff.sendMessages([{"type": "text", "text": "Hello Minna !  |  Let's Play Tic Tac Toe Together (⁎˃ᆺ˂)  |  Thanks for play this game!  |  Don't Forget to check my social media : instagram.com/haniueo , github.com/haniueo  |"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
   }
   
   function login(){
