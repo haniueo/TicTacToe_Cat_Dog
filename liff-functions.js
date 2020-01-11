@@ -15,7 +15,7 @@ function getProfile(){
   }
 
   function sendMessage(){
-    liff.sendMessages([{"type": "text", "text": "Hello Minna ! </br> Let's Play Tic Tac Toe Together (⁎˃ᆺ˂) </br> Thanks for play this game! </br> Don't Forget to check my social media :"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
+    liff.sendMessages([{"type": "text", "text": "Hello Minna !  |  Let's Play Tic Tac Toe Together (⁎˃ᆺ˂)  |  Thanks for play this game!  |  Don't Forget to check my social media : instagram.com/haniueo , github: github.com/haniueo  |"}]).then( ()=> { window.alert("Message has been sent")}).catch((e) => {window.alert(e)})
   }
   
   function login(){
@@ -32,19 +32,20 @@ function getProfile(){
 
   function openWindow(){
     liff.openWindow({
-      url: "https://sirateek.me",
+      url: "https://tictactoe-2player.herokuapp.com/",
       external: true
     });
   }
 
   function closeWindow(){
+      window.alert("Are u Sure To Leave Me? (╥﹏╥)") 
     liff.closeWindow()
   }
   
   function logout(){
     if (liff.isLoggedIn()) {
       liff.logout();
-      window.alert("Successfully to Logout")
+      window.alert("Onichan Jangan Pergi 😿")
       location.reload();
     }
   }
