@@ -17,3 +17,4 @@ if (liff.isLoggedIn()) {
 }
 document.getElementById("isInClient").innerHTML = liff.isInClient() 
 document.getElementById("isLoggedIn").innerHTML = liff.isLoggedIn()
+
